@@ -14,6 +14,9 @@
 
 import streamlit as st
 from streamlit.logger import get_logger
+from streamlit_webrtc import webrtc_streamer
+
+
 
 LOGGER = get_logger(__name__)
 
@@ -25,6 +28,8 @@ def run():
     )
 
     st.write("# Welcome to Streamlit! 👋")
+
+    webrtc_streamer(key="sample")
 
     st.sidebar.success("Select a demo above.")
 
